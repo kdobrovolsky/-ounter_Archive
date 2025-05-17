@@ -1,35 +1,43 @@
 import { useState } from "react";
 import { Button } from "./Button";
+import { TableCounter } from "./TableCounter";
 
-
+//выносим константы чтобы не было лишнего перерендринга
+const maxValue = 5;
+const minValue = 0;
 export const Counter = () => {
-
-  const maxValue = 5
-  const minValue = 0
-
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   const buttonIncrementCounter = () => {
-    if(count<5){
-      setCount(count+1)
+    if (count < 5) {
+      setCount(prev=>prev+1);
     }
-  }
-
-  const buttonDecrementCounter = () => {
-    setCount(count-1)
-  }
+  };
 
   const buttonResetCounter = () => {
-    setCount(0)
-  }
+    setCount(0);
+  };
 
-  return(
-    <div>
-    <div>{count}</div>
-    <Button title="inc" onClick={buttonIncrementCounter} disable={count>=maxValue} className=""/>
-    <Button title="decr" onClick={buttonDecrementCounter} disable={count<=minValue} className=""/>
-    <Button title="reset" onClick={buttonResetCounter} disable={count<=minValue} className=""/>
+  const incrementDisabled= count >= maxValue
+  const resetDisable = count <= minValue
+
+  return (
+    <div className="container">
+      <div className="app">
+        <TableCounter count={count} />
+        <div className="button-wrapper">
+          <Button
+            title="inc"
+            onClick={buttonIncrementCounter}
+            disable={incrementDisabled}
+            className="button"/>
+          <Button
+            title="reset"
+            onClick={buttonResetCounter}
+            disable={resetDisable}
+            className="button"/>
+        </div>
+      </div>
     </div>
-  )
-  
+  );
 };
