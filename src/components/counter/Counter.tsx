@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { Button } from "./Button";
-import { TableCounter } from "./TableCounter";
+import { Button } from "../ui/button/Button";
+import { TableCounter } from "../ui/tableCounter/TableCounter";
+import  s from "../counter/counter.module.css";
 
 //выносим константы чтобы не было лишнего перерендринга
 const maxValue = 5;
@@ -22,20 +23,20 @@ export const Counter = () => {
   const resetDisable = count <= minValue
 
   return (
-    <div className="container">
-      <div className="app">
+    <div className={s.container}>
+      <div className={s.app}>
         <TableCounter count={count} />
-        <div className="button-wrapper">
+        <div >
           <Button
             title="inc"
             onClick={buttonIncrementCounter}
             disable={incrementDisabled}
-            className="button"/>
+            className={incrementDisabled?s.disableStyle:s.button}/>
           <Button
             title="reset"
             onClick={buttonResetCounter}
             disable={resetDisable}
-            className="button"/>
+            className={resetDisable?s.disableStyle:s.button}/>
         </div>
       </div>
     </div>

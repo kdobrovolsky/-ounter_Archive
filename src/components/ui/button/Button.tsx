@@ -1,7 +1,7 @@
 
 type ButtonProps = {
     title: string
-    onClick: () => void
+    onClick?: () => void
     disable?: boolean
     className?: string
 }

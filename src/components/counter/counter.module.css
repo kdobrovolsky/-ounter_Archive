@@ -1,0 +1,40 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vw;
+   
+}
+.app{
+    border: 5px solid aqua;
+    width: 400px;
+    height: 300px;
+    padding: 30px;
+    border-radius: 10px;
+}
+.disableStyle{
+    min-width: 170px;
+    min-height: 50px;
+    margin: 10px;
+    background-color: gray;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+.button{
+    min-width: 170px;
+    min-height: 50px;
+    margin: 10px;
+    background-color: aqua;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+
+

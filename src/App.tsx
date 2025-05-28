@@ -1,6 +1,14 @@
 import "./App.css";
-import { Counter } from "./components/Counter";
+import { Counter } from "./components/counter/Counter";
+import { SettingsCounter } from "./components/settingsCounter/SettingsCounter";
+
 
 export function App() {
-  return <Counter />;
+  return(
+    <div>
+       <Counter />
+       <SettingsCounter/>
+    </div>
+  )
+  
 }
