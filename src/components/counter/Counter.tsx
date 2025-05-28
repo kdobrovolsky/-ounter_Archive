@@ -24,7 +24,7 @@ export const Counter = () => {
 
   return (
     <div className={s.container}>
-      <div className={s.app}>
+      <div className={s.counterWrapper}>
         <TableCounter count={count} />
         <div >
           <Button

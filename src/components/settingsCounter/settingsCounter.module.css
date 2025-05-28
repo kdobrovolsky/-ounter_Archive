@@ -3,9 +3,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    
    
 }
+
 .counterWrapper{
     border: 5px solid aqua;
     width: 400px;
@@ -13,17 +14,7 @@
     padding: 30px;
     border-radius: 10px;
 }
-.disableStyle{
-    min-width: 170px;
-    min-height: 50px;
-    margin: 10px;
-    background-color: gray;
-    color: white;
-    font-size: 20px;
-    font-weight: 800;
-    border-radius: 10px;
-    margin-top: 50px;
-}
+
 .button{
     min-width: 170px;
     min-height: 50px;
@@ -34,8 +25,34 @@
     font-weight: 800;
     border-radius: 10px;
     margin-top: 50px;
+}
+
+.buttonWrapper{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.label{
+    display: block;
+   margin-left: 90px;
+}
+
+.inputStyle{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
     
 }
 
+.inputWrapper{
+    border: 5px solid rgb(12, 70, 70);
+    padding: 20px;
+    border-radius: 20px;
+}
 
-
+label{
+    font-size: 20px;
+    font-weight: 800;
+    color:aquamarine;
+}
