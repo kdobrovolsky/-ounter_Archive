@@ -6,17 +6,21 @@ type CounterPropsType = {
   buttonIncrementCounter: () => void
   buttonResetCounter: () => void
   count: number
+  isInvalid: boolean
+  maxValue: number
+  startValue: number
 }
-const maxValue = 5;
-const minValue = 0;
-export const Counter = ({buttonIncrementCounter,buttonResetCounter,count}:CounterPropsType) => {
+
+
+export const Counter = ({buttonIncrementCounter,buttonResetCounter,count,isInvalid,maxValue,startValue}:CounterPropsType) => {
  
   const incrementDisabled= count >= maxValue
-  const resetDisable = count <= minValue
+  const resetDisable = count <= startValue
   return (
     <div className={s.container}>
       <div className={s.counterWrapper}>
-        <TableCounter count={count} />
+        <TableCounter count={count} maxValue={maxValue} />
+        {isInvalid && <p>Incorrect value!!</p>}
         <div >
           <Button
             title="inc"
