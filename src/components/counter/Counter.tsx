@@ -19,8 +19,9 @@ export const Counter = ({buttonIncrementCounter,buttonResetCounter,count,isInval
   return (
     <div className={s.container}>
       <div className={s.counterWrapper}>
-        <TableCounter count={count} maxValue={maxValue} />
-        {isInvalid && <p>Incorrect value!!</p>}
+        <TableCounter count={count} maxValue={maxValue} startValue={startValue} isInvalid={isInvalid} />
+       
+        
         <div >
           <Button
             title="inc"
